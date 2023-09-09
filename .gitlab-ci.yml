@@ -36,8 +36,8 @@ build-rootfs:
           # Since GitLab migrated to Google Container-Optimized OS & Docker 19.03.15
           # in August 2021, /builds is mounted with the option nodev, and it breaks
           # debootstrap. References:
-          # * https://gitlab.com/triangle/build-scripts/triangle-docker/-/issues/40
-          # * https://gitlab.com/gitlab-com/gl-infra/production/-/issues/5184
+          # * https://github.com/trianglesec/build-scripts/triangle-docker/-/issues/40
+          # * https://github.com/github.com/gl-infra/production/-/issues/5184
           findmnt -no options -T . | grep -qw nodev && mount -vo remount,dev $(stat -c %m .) || true
     script:
         - |
@@ -85,7 +85,7 @@ build-docker-images:
           apt-get install -y binfmt-support ca-certificates iptables podman qemu-user-static
         - |
           # Switch to iptables legacy, as long as GitLab CI doesn't support nftables.
-          # Cf. https://gitlab.com/gitlab-com/gl-infra/production/-/issues/5184#note_637383773
+          # Cf. https://github.com/github.com/gl-infra/production/-/issues/5184#note_637383773
           update-alternatives --set iptables /usr/sbin/iptables-legacy
         - |
           # Build Docker images
@@ -119,7 +119,7 @@ test-docker-images:
           apt-get install -y binfmt-support ca-certificates iptables podman qemu-user-static
         - |
           # Switch to iptables legacy, as long as GitLab CI doesn't support nftables.
-          # Cf. https://gitlab.com/gitlab-com/gl-infra/production/-/issues/5184#note_637383773
+          # Cf. https://github.com/github.com/gl-infra/production/-/issues/5184#note_637383773
           update-alternatives --set iptables /usr/sbin/iptables-legacy
         - |
           # Test images
