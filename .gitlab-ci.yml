@@ -36,7 +36,7 @@ build-rootfs:
           # Since GitLab migrated to Google Container-Optimized OS & Docker 19.03.15
           # in August 2021, /builds is mounted with the option nodev, and it breaks
           # debootstrap. References:
-          # * https://gitlab.com/trianglelinux/build-scripts/triangle-docker/-/issues/40
+          # * https://gitlab.com/triangle/build-scripts/triangle-docker/-/issues/40
           # * https://gitlab.com/gitlab-com/gl-infra/production/-/issues/5184
           findmnt -no options -T . | grep -qw nodev && mount -vo remount,dev $(stat -c %m .) || true
     script:

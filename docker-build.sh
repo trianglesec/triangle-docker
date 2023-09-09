@@ -14,8 +14,8 @@ if [ "${GITLAB_CI:-}" = true ]; then
     BUILD_DATE="$CI_JOB_STARTED_AT"
     VCS_REF="$CI_COMMIT_SHORT_SHA"
 else
-    REGISTRY_IMAGE="localhost/trianglelinux"
-    PROJECT_URL="https://gitlab.com/trianglelinux/build-scripts/triangle-docker"
+    REGISTRY_IMAGE="localhost/triangle"
+    PROJECT_URL="https://gitlab.com/triangle/build-scripts/triangle-docker"
     BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
     VCS_REF=$(git rev-parse --short HEAD)
 fi

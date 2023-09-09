@@ -5,12 +5,12 @@ version of the Triangle Linux Rolling Distribution. There are no tools added
 to this image, so you will need to install them yourself. 
 
 For details about Triangle Linux metapackages, check
-<https://www.triangle.org/blog/triangle-linux-metapackages/>.
+<https://www.trianglesec.github.io/blog/triangle-linux-metapackages/>.
 
 # Weekly updates
 
 Docker images are updated weekly and pushed to the Docker Hub at
-<https://hub.docker.com/u/trianglelinux>.
+<https://hub.docker.com/u/triangle>.
 
 You can run those images with either Docker or Podman, at your convenience:
 
@@ -18,12 +18,12 @@ You can run those images with either Docker or Podman, at your convenience:
 # Podman
 podman run --rm -it triangle-rolling
 # Docker
-docker run --rm -it trianglelinux/triangle-rolling
+docker run --rm -it triangle/triangle-rolling
 ```
 
 For more documentation, refer to:
-* <https://www.triangle.org/docs/containers/using-triangle-podman-images/>
-* <https://www.triangle.org/docs/containers/using-triangle-docker-images/>
+* <https://www.trianglesec.github.io/docs/containers/using-triangle-podman-images/>
+* <https://www.trianglesec.github.io/docs/containers/using-triangle-docker-images/>
 
 # How to build those images
 

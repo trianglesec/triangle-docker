@@ -16,8 +16,8 @@ LABEL org.opencontainers.image.created="$BUILD_DATE" \
       org.opencontainers.image.version="$VERSION" \
       org.opencontainers.image.title="Triangle Linux ($RELEASE_DESCRIPTION branch)" \
       org.opencontainers.image.description="Official Triangle Linux container image for $RELEASE_DESCRIPTION" \
-      org.opencontainers.image.url="https://www.triangle.org/" \
-      org.opencontainers.image.authors="Triangle Developers <devel@triangle.org>"
+      org.opencontainers.image.url="https://www.trianglesec.github.io/" \
+      org.opencontainers.image.authors="Triangle Developers <devel@trianglesec.github.io>"
 
 ADD $TARBALL /
 
