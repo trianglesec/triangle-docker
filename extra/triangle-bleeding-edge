@@ -1,0 +1,7 @@
+ARG REGISTRY_IMAGE
+ARG TAG
+FROM $REGISTRY_IMAGE/triangle-rolling:$TAG
+
+RUN echo "deb http://trianglesec.github.io/triangle triangle-bleeding-edge main contrib non-free non-free-firmware" >/etc/apt/sources.list.d/triangle-bleeding-edge.list
+
+CMD ["bash"]
